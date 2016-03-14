@@ -22,7 +22,7 @@ Add [SDWebImage](https://github.com/rs/SDWebImage) framework to your project
     - '#import "LTImageViewerViewController.h"'
     - '#import "UIImageView+LTImageViewer.h"'
 
-* Then add protocol <LTImageViewerDataSources, LTImageViewerDelegate> to your controller
+* Then add protocol 'LTImageViewerDataSources, LTImageViewerDelegate' to your controller
 
 * Config your UIImageView with LTImageViewer:
 ```
