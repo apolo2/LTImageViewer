@@ -27,22 +27,26 @@ Add [SDWebImage](https://github.com/rs/SDWebImage) framework to your project
 
 * Implement LTImageViewer DataSoucres in your controller:
     //Number of image in LTImageViewer
-    - (NSInteger) numberOfImageInViewer {
+    - (NSInteger) numberOfImageInViewer 
+    {
         return [number of image in your controller];
     }
     
     //If you use web url for display image
-    - (NSURL*) imageURLAtIndex:(NSInteger)index {
+    - (NSURL*) imageURLAtIndex:(NSInteger)index 
+    {
         return [Web URL of image at index];
     }
 
     //Else use normal image
-    - (UIImage*) imageAtIndex:(NSInteger)index {
+    - (UIImage*) imageAtIndex:(NSInteger)index 
+    {
         return [your image at index];
     }
     
     //Top bar view and bottom bar view
-    - (UIView*) topBarViewForViewer:(LTImageViewerViewController *)viewer {
+    - (UIView*) topBarViewForViewer:(LTImageViewerViewController *)viewer 
+    {
         //You can return your custom bar view
         //Return nil if you don't use bar view
         //Default return LTImageViewerBottomBarView
@@ -50,7 +54,8 @@ Add [SDWebImage](https://github.com/rs/SDWebImage) framework to your project
         return nil;
     }
 
-    - (UIView*) bottomBarViewForViewer:(LTImageViewerViewController *)viewer {
+    - (UIView*) bottomBarViewForViewer:(LTImageViewerViewController *)viewer 
+    {
         //You can return your custom bar view
         //Return nil if you don't use bar view
         //Default return LTImageViewerBottomBarView
@@ -59,7 +64,8 @@ Add [SDWebImage](https://github.com/rs/SDWebImage) framework to your project
     }
 
 * Handle LTImageViewerDelegate for change:
-    - (void) imageViewer:(LTImageViewerViewController *)viewer didShowImageAtIndex:(NSInteger)index {
+    - (void) imageViewer:(LTImageViewerViewController *)viewer didShowImageAtIndex:(NSInteger)index 
+    {
         //Your change code
     }
 
