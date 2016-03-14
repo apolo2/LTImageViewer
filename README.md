@@ -23,13 +23,15 @@ Add [SDWebImage](https://github.com/rs/SDWebImage) framework to your project
     - '#import "UIImageView+LTImageViewer.h"'
 
 * Config your UIImageView with LTImageViewer:
-    - [youImageView configWithViewerDataSources:dataSources delegate:delegate imageIndex:index];
+```
+[youImageView configWithViewerDataSources:dataSources delegate:delegate imageIndex:index];
+```
 
 * Implement LTImageViewer DataSoucres in your controller:
 ```
 - (NSInteger) numberOfImageInViewer 
 {
-return [number of image in your controller];
+    return [number of image in your controller];
 }
 ```
 
@@ -37,7 +39,7 @@ return [number of image in your controller];
 //If you use web url for display image
 - (NSURL*) imageURLAtIndex:(NSInteger)index 
 {
-return [Web URL of image at index];
+    return [Web URL of image at index];
 }
 ```
 
@@ -45,7 +47,7 @@ return [Web URL of image at index];
 //Else use normal image
 - (UIImage*) imageAtIndex:(NSInteger)index 
 {
-return [your image at index];
+    return [your image at index];
 }
 ```
 
@@ -53,20 +55,20 @@ return [your image at index];
 ```
 - (UIView*) topBarViewForViewer:(LTImageViewerViewController *)viewer 
 {
-//You can return your custom bar view
-//Return nil if you don't use bar view
-//Default return LTImageViewerBottomBarView
+    //You can return your custom bar view
+    //Return nil if you don't use bar view
+    //Default return LTImageViewerBottomBarView
 
-return nil;
+    return nil;
 }
 
 - (UIView*) bottomBarViewForViewer:(LTImageViewerViewController *)viewer 
 {
-//You can return your custom bar view
-//Return nil if you don't use bar view
-//Default return LTImageViewerBottomBarView
+    //You can return your custom bar view
+    //Return nil if you don't use bar view
+    //Default return LTImageViewerBottomBarView
 
-return nil;
+    return nil;
 }
 ```
 
@@ -74,7 +76,7 @@ return nil;
 ```
 - (void) imageViewer:(LTImageViewerViewController *)viewer didShowImageAtIndex:(NSInteger)index 
 {
-//Your change code
+    //Your change code to update viewer status
 }
 ```
 
