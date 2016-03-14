@@ -10,9 +10,6 @@
 #import "HomeCollectionViewCell.h"
 #import "LTImageViewerViewController.h"
 #import "UIImageView+LTImageViewer.h"
-#import "LTTapGestureRecognizer.h"
-#import "LTImageViewerTopBarView.h"
-#import "LTImageViewerBottomBarView.h"
 
 @interface HomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LTImageViewerDataSources, LTImageViewerDelegate>
 
