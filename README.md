@@ -1,5 +1,4 @@
 # LTImageViewer
-Custom tableview which support parallax header
 
 ![](https://github.com/apolo2/LTImageViewer/blob/master/LTImageViewer.gif)
 
