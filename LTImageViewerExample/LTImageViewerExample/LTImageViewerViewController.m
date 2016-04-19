@@ -293,6 +293,10 @@
         self.placeImageView.hidden = YES;
         self.collectionView.hidden = NO;
         [self showToolBarView];
+        
+        if (finished && self.delegate && [self.delegate respondsToSelector:@selector(imageViewer:didShowImageAtIndex:)]) {
+            [self.delegate imageViewer:self didShowImageAtIndex:self.fromGesture.imageIndex];
+        }
     }];
 }
 
