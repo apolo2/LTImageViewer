@@ -216,7 +216,7 @@
         [cell configWithImage:image];
     }
     
-    //Disible viewer tap gesture when cell zoom
+    //Disible viewer tap gesture when cell double tap to zoom
     [self.tapGesture requireGestureRecognizerToFail:cell.doubleTapGesture];
     
     return cell;
@@ -293,6 +293,10 @@
         self.placeImageView.hidden = YES;
         self.collectionView.hidden = NO;
         [self showToolBarView];
+        
+        if (finished && self.delegate && [self.delegate respondsToSelector:@selector(imageViewer:didShowImageAtIndex:)]) {
+            [self.delegate imageViewer:self didShowImageAtIndex:self.fromGesture.imageIndex];
+        }
     }];
 }
 
